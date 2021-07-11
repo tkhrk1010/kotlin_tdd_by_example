@@ -1,4 +1,4 @@
-class Dollar(private var amount: Int) : Money(amount) {
+class Dollar(amount: Int) : Money(amount) {
 
     // 型は引数のあとに定義
     fun times(multiplier: Int): Dollar {
@@ -6,8 +6,8 @@ class Dollar(private var amount: Int) : Money(amount) {
     }
 
     override fun equals(any: Any?): Boolean {
-        val dollar: Dollar = any as Dollar
-        return amount == dollar.amount
+        val money: Money = any as Money
+        return amount == money.amount
     }
 
 }

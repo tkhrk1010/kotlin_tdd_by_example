@@ -1,3 +1,4 @@
-open class Money(amount: Int) {
+// openを使ってoverride可能にしておく
+open class Money(val amount: Int) {
 
 }
