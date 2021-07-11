@@ -1,8 +1,8 @@
-class Dollar(amount: Int, currency: String) : Money(amount, currency) {
+class Dollar(amount: Int, currency: String?) : Money(amount, currency) {
 
     // 型は引数のあとに定義
     override fun times(multiplier: Int): Money {
-        return Money.dollar(amount * multiplier)
+        return Dollar(amount * multiplier, currency)
     }
 
 }

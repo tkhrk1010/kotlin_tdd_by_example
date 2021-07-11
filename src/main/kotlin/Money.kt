@@ -1,7 +1,9 @@
 // openを使ってoverride可能にしておく
-abstract class Money(var amount: Int, open var currency: String?) {
+open class Money(var amount: Int, open var currency: String?) {
 
-    abstract fun times(multiplier: Int): Money
+    open fun times(multiplier: Int): Money {
+        return Money(1,"AAA")
+    }
     fun currency(): String? {
         return currency
     }
@@ -18,5 +20,10 @@ abstract class Money(var amount: Int, open var currency: String?) {
         fun franc(amount: Int): Money {
             return Franc(amount, "CHF")
         }
+    }
+
+    //debug用
+    override fun toString(): String {
+        return "$amount $currency"
     }
 }
