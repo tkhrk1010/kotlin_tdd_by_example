@@ -5,4 +5,7 @@ class Franc(amount: Int) : Money(amount) {
         return Franc(amount * multiplier)
     }
 
+    override fun currency(): String {
+        return "CHF"
+    }
 }
