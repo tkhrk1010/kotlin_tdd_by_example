@@ -1,5 +1,5 @@
 // openを使ってoverride可能にしておく
-open class Money(var amount: Int, open var currency: String?) {
+open class Money(var amount: Int, open var currency: String?) : Expression {
 
     fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
@@ -27,7 +27,7 @@ open class Money(var amount: Int, open var currency: String?) {
         return "$amount $currency"
     }
 
-    fun plus(addend: Money): Money {
+    fun plus(addend: Money): Expression {
         return Money(amount + addend.amount, currency)
     }
 }
