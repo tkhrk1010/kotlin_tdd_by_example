@@ -4,7 +4,7 @@ import org.junit.Test
 class MoneyTest {
     @Test
     fun testMultiplication() {
-        val five: Dollar = Dollar(5)
+        val five = Dollar(5)
         assertEquals(Dollar(10), five.times(2))
         assertEquals(Dollar(15), five.times(3))
     }
@@ -18,7 +18,7 @@ class MoneyTest {
     }
     @Test
     fun testFrancMultiplication() {
-        val five: Franc = Franc(5)
+        val five = Franc(5)
         assertEquals(Franc(10), five.times(2))
         assertEquals(Franc(15), five.times(3))
     }
