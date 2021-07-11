@@ -1,4 +1,5 @@
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class MoneyTest {
@@ -12,6 +13,6 @@ class MoneyTest {
     }
     @Test
     fun testEquality() {
-        assertEquals(Dollar(5), Dollar(5))
+        assertTrue(Dollar(5).equals(Dollar(5)))
     }
 }
