@@ -6,8 +6,11 @@ abstract class Money(val amount: Int) {
         return amount == money.amount && javaClass.equals(money.javaClass)
     }
     companion object {
-        fun dollar(amount: Int): Dollar {
+        fun dollar(amount: Int): Money {
             return Dollar(amount)
+        }
+        fun franc(amount: Int): Money {
+            return Franc(amount)
         }
     }
 }
