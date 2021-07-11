@@ -1,8 +1,8 @@
 // openを使ってoverride可能にしておく
 open class Money(var amount: Int, open var currency: String?) {
 
-    open fun times(multiplier: Int): Money {
-        return Money(1,"AAA")
+    fun times(multiplier: Int): Money {
+        return Money(amount * multiplier, currency)
     }
     fun currency(): String? {
         return currency
