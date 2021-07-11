@@ -2,7 +2,7 @@
 open class Money(val amount: Int) {
     override fun equals(any: Any?): Boolean {
         val money: Money = any as Money
-        return amount == money.amount
+        return amount == money.amount && javaClass.equals(money.javaClass)
     }
 
 }
