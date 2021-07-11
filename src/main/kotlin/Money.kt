@@ -10,7 +10,7 @@ open class Money(var amount: Int, open var currency: String?) {
 
     override fun equals(obj: Any?): Boolean {
         val money: Money = obj as Money
-        return amount == money.amount && javaClass.equals(money.javaClass)
+        return amount == money.amount && currency == money.currency
     }
 
     companion object {
