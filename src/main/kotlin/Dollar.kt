@@ -1,4 +1,4 @@
-class Dollar(var amount: Int) {
+class Dollar(private var amount: Int) {
 
     // 型は引数のあとに定義
     fun times(multiplier: Int): Dollar {
