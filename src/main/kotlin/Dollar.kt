@@ -4,10 +4,4 @@ class Dollar(amount: Int) : Money(amount) {
     fun times(multiplier: Int): Dollar {
         return Dollar(amount * multiplier)
     }
-
-    override fun equals(any: Any?): Boolean {
-        val money: Money = any as Money
-        return amount == money.amount
-    }
-
 }
